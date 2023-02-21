@@ -1,0 +1,13 @@
+@import "./colors";
+@import "./fonts";
+
+:root,
+body {
+	height: 100vh;
+}
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
