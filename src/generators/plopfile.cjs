@@ -1,4 +1,8 @@
 module.exports = (plop) => {
+	plop.setHelper("capitalize", (text) => {
+		return text[0].toUppercase + text.split(1)
+	})
+
 	//component
 	plop.setGenerator("component", {
 		description: "Create a component",
@@ -18,7 +22,7 @@ module.exports = (plop) => {
 				// Add a new file
 				type: "add",
 				// Path for the new file
-				path: "src/components/{{pascalCase name}}/{{pascalCase name}}.tsx",
+				path: "../components/{{pascalCase name}}/{{pascalCase name}}.tsx",
 				// Handlebars template used to generate content of new file
 				templateFile: "templates/component.hbs",
 			},
